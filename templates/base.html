@@ -13,7 +13,7 @@
     <nav>
       <ul>
         {% if user.is_authenticated %}
-        <li style="margin-right: 9px; font-size: 21px;"><a href="{% url 'detalles_cuenta' %}">Lista de tareas</a></li>
+        <li style="margin-right: 9px; font-size: 21px;"><a href="{% url 'tasks:task_list' %}">Lista de tareas</a></li>
         <li style="margin-right: 9px; font-size: 21px;"><a href="{% url 'detalles_cuenta' %}">Información del miembro</a></li>
         <li style="margin-right: 10px; font-size: 21px;"><a href="{% url 'logout' %}">Cerrar sesión</a></li>
         {% else %}
