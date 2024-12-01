@@ -2,9 +2,14 @@
 
 {% block main %}
   <h1>Editar cuenta</h1>
+  <p>Última conexión: {{ user.last_login }}</p>
   <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <button type="submit">Guardar cambios</button>
   </form>
+  <a class="nav-link" href="{% url 'tasks:task_list' %}">Lista de tareas</a>
+  <p><a href="{% url 'tasks:create_task' %}">Crear nueva tarea</a></p>
+  <p><a href="{% url 'tasks:edit_password' %}">Cambiar contraseña</a></p>
+  <p><a href="{% url 'tasks:delete_account' %}">Eliminar cuenta</a></p>
 {% endblock %}

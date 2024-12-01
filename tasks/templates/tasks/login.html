@@ -19,4 +19,6 @@
     {% endif %}
     <button type="submit">Iniciar sesión</button>
   </form>
+  <a class="nav-link" href="{% url 'tasks:task_list' %}">Lista de tareas</a>
+  <p><a href="{% url 'tasks:create_task' %}">Crear nueva tarea</a></p>
 {% endblock %}

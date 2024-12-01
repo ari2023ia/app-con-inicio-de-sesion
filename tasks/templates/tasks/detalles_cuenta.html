@@ -5,6 +5,9 @@
   <p>Nombre de usuario: {{ user.username }}</p>
   <p>Correo electrónico: {{ user.email }}</p>
   <p>Última conexión: {{ user.last_login }}</p>
+  <p><a href="{% url 'tasks:edit_account' %}">Editar cuenta</a></p>
+  <a class="nav-link" href="{% url 'tasks:task_list' %}">Lista de tareas</a>
   <button><a href="{% url 'tasks:edit_password' %}">Cambiar contraseña</a></button>
   <button><a href="{% url 'tasks:delete_account' %}">Eliminar cuenta</a></button>
+  <p>Tu suscripcion vence el 1 de cada mes</p>
 {% endblock %}

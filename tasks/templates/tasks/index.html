@@ -7,11 +7,17 @@
     <h2>Información de tu cuenta:</h2>
     <p>Nombre de usuario: {{ user.username }}</p>
     <p>Correo electrónico: {{ user.email }}</p>
+    <p>Última conexión: {{ user.last_login }}</p>
     <button><a href="{% url 'detalles_cuenta' %}">Información de mi cuenta</a></button>
     <button><a href="{% url 'logout' %}">Cerrar sesión</a></button>
+    <p><a href="{% url 'tasks:edit_account' %}">Editar cuenta</a></p>
+    <a class="nav-link" href="{% url 'tasks:task_list' %}">Lista de tareas</a>
+    <p><a href="{% url 'tasks:create_task' %}">Crear nueva tarea</a></p>
   {% else %}
     <button><a href="{% url 'login' %}">Iniciar sesión</a></button>
     <button><a href="{% url 'register' %}">Registrarse</a></button>
-    <h3> Recuerda iniciar sesion con tu mejor correo </h3>
+    <h3> Recuerda iniciar sesion con tu mejor correo ✨</h3>
+    <a class="nav-link" href="{% url 'tasks:task_list' %}">Lista de tareas</a>
+    <p><a href="{% url 'tasks:create_task' %}">Crear nueva tarea</a></p>
   {% endif %}
 {% endblock %}
