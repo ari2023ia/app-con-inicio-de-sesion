@@ -5,7 +5,7 @@
   <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button><a href="{% url 'register' %}">Registrarse</a></button>
+    <!--<button><a href="{% url 'register' %}">Registrarse</a></button>-->
     {% if form.errors %}
       <div class="alert alert-danger">
         <ul>
@@ -19,6 +19,6 @@
     {% endif %}
     <button type="submit">Iniciar sesión</button>
   </form>
-  <a class="nav-link" href="{% url 'tasks:task_list' %}">Lista de tareas</a>
-  <p><a href="{% url 'tasks:create_task' %}">Crear nueva tarea</a></p>
+  <!--<a class="nav-link" href="{% url 'tasks:task_list' %}">Lista de tareas</a>
+  <p><a href="{% url 'tasks:create_task' %}">Crear nueva tarea</a></p>-->
 {% endblock %}

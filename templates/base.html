@@ -12,7 +12,15 @@
   <body>
     <nav>
       <ul>
-        <li><a href="{% url 'tasks:index' %}" style="font-size: 26px;">Inicio</a></li> 
+        {% if user.is_authenticated %}
+        <li style="margin-right: 9px; font-size: 21px;"><a href="{% url 'detalles_cuenta' %}">Lista de tareas</a></li>
+        <li style="margin-right: 9px; font-size: 21px;"><a href="{% url 'detalles_cuenta' %}">Información del miembro</a></li>
+        <li style="margin-right: 10px; font-size: 21px;"><a href="{% url 'logout' %}">Cerrar sesión</a></li>
+        {% else %}
+        <li style="margin-right: 9px; font-size: 21px;"><a href="{% url 'login' %}">Acceso a la cuenta</a></li>
+        <li style="margin-right: 10px; font-size: 21px;"><a href="{% url 'register' %}">Registro de cuenta</a></li>
+        {% endif %}
+         
       </ul>
     </nav>
     <main>

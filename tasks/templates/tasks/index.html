@@ -14,10 +14,11 @@
     <a class="nav-link" href="{% url 'tasks:task_list' %}">Lista de tareas</a>
     <p><a href="{% url 'tasks:create_task' %}">Crear nueva tarea</a></p>
   {% else %}
-    <button><a href="{% url 'login' %}">Iniciar sesión</a></button>
+    <!--<button><a href="{% url 'login' %}">Iniciar sesión</a></button>
     <button><a href="{% url 'register' %}">Registrarse</a></button>
     <h3> Recuerda iniciar sesion con tu mejor correo ✨</h3>
     <a class="nav-link" href="{% url 'tasks:task_list' %}">Lista de tareas</a>
     <p><a href="{% url 'tasks:create_task' %}">Crear nueva tarea</a></p>
-  {% endif %}
+--> <h3> Recuerda iniciar sesion con tu mejor correo ✨</h3>
+    {% endif %}
 {% endblock %}
