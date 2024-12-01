@@ -185,20 +185,6 @@ def register_view(request):
         form = RegisterForm()
     return render(request, 'tasks/register.html', {'form': form})
 
-def login_view(request):
-    if request.method == 'POST':
-        form = LoginForm(request.POST)
-        if form.is_valid():
-            username = form.cleaned_data['username']
-            password = form.cleaned_data['password']
-            user = authenticate(request, username=username, password=password)
-            if user is not None:
-                login(request, user)
-                return redirect(reverse('tasks:detalles_cuenta'))
-    else:
-        form = LoginForm()
-    return render(request, 'tasks/login.html', {'form': form})
-
 def create(request):
     if (request.method == 'POST'):
         title = request.POST['title']
