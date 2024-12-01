@@ -3,7 +3,7 @@
 {% block main %}
   <h1>Detalles de la cuenta</h1>
   <p>Nombre de usuario: {{ user.nombre_de_usuario }}</p>
-  <p>Correo electrónico: {{ user.email }}</p>
-  <p>Edad: {{ user.edad }}</p>
+  <p>Correo electrónico: {{ user.correo_electronico }}</p>
+  <p>Última conexión {{ user.fecha_union }}</p>
   <p><a href="{% url 'tasks:edit_account' %}">Editar cuenta</a></p>
 {% endblock %}

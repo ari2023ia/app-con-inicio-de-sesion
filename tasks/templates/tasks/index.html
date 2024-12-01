@@ -5,9 +5,9 @@
   <h1>Bienvenido a la aplicación</h1>
   {% if user.is_authenticated %}
     <h2>Información de tu cuenta:</h2>
-    <p>Nombre de usuario: {{ user.username }}</p>
-    <p>Correo electrónico: {{ user.email }}</p>
-    <p>Última conexión: {{ user.last_login }}</p>
+    <p>Nombre de usuario: {{ user.nombre_de_usuario }}</p>
+    <p>Correo electrónico: {{ user.correo_electronico }}</p>
+    <p>Última conexión: {{ user.fecha_union }}</p>
     <button><a href="{% url 'detalles_cuenta' %}">Información de mi cuenta</a></button>
     <button><a href="{% url 'logout' %}">Cerrar sesión</a></button>
     <p><a href="{% url 'tasks:edit_account' %}">Editar cuenta</a></p>

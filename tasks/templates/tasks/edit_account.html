@@ -2,7 +2,7 @@
 
 {% block main %}
   <h1>Editar cuenta</h1>
-  <p>Última conexión: {{ user.last_login }}</p>
+  <p>Última conexión: {{ user.fecha_union }}</p>
   <form method="post">
     {% csrf_token %}
     {{ form.as_p }}

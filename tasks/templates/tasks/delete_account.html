@@ -2,9 +2,9 @@
 
 {% block main %}
   <h1>Eliminar cuenta</h1>
-  <p>Nombre de usuario: {{ user.username }}</p>
-  <p>Correo electrónico: {{ user.email }}</p>
-  <p>Última conexión: {{ user.last_login }}</p>
+  <p>Nombre de usuario: {{ user.nombre_de_usuario }}</p>
+  <p>Correo electrónico: {{ user.correo_electronico}}</p>
+  <p>Última conexión: {{ user.fecha_union}}</p>
   <p>¿Estás seguro de que deseas eliminar tu cuenta?</p>
   <form method="post">
     {% csrf_token %}
