@@ -5,7 +5,7 @@
   <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <p>Ingrese su correo si el nombre de usuario no funciona<p>
+    <button><a href="{% url 'register' %}">Registrarse</a></button>
     {% if form.errors %}
       <div class="alert alert-danger">
         <ul>
