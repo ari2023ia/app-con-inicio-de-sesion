@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block main %}
+  <h1>Iniciar sesión</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <p>Ingrese su correo si el nombre de usuario no funciona<p>
+    {% if form.errors %}
+      <div class="alert alert-danger">
+        <ul>
+          {% for field, errors in form.errors.items %}
+            {% for error in errors %}
+              <li>{{ field }}: {{ error }}</li>
+            {% endfor %}
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+    <button type="submit">Iniciar sesión</button>
+  </form>
+{% endblock %}

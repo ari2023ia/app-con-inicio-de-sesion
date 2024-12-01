@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block main %}
+  <h1>Detalles de la tarea</h1>
+  <p>Título: {{ task.title }}</p>
+  <p>Contenido: {{ task.content }}</p>
+  <p><a href="{% url 'tasks:task_list' %}">Volver a la lista de tareas</a></p>
+  <p><a href="{% url 'tasks:edit_task' task.id %}">Editar tarea</a></p>
+  <p><a href="{% url 'tasks:delete_task' task.id %}">Eliminar tarea</a></p>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block main %}
+  <h1>Detalles de la cuenta</h1>
+  <p>Nombre de usuario: {{ user.username }}</p>
+  <p>Correo electrónico: {{ user.email }}</p>
+  <p>Última conexión: {{ user.last_login }}</p>
+  <button><a href="{% url 'tasks:edit_password' %}">Cambiar contraseña</a></button>
+  <button><a href="{% url 'tasks:delete_account' %}">Eliminar cuenta</a></button>
+{% endblock %}
