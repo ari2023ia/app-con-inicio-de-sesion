@@ -7,6 +7,7 @@
     <h2>Información de tu cuenta:</h2>
     <p>Nombre de usuario: {{ user.nombre_de_usuario }}</p>
     <p>Correo electrónico: {{ user.correo_electronico }}</p>
+    <p>Correo electrónico: {{ user.edad }}</p>
     <p>Última conexión: {{ user.fecha_union }}</p>
     <button><a href="{% url 'detalles_cuenta' %}">Información de mi cuenta</a></button>
     <button><a href="{% url 'logout' %}">Cerrar sesión</a></button>

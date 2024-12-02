@@ -4,6 +4,7 @@
   <h1>Detalles de la cuenta</h1>
   <p>Nombre de usuario: {{ user.nombre_de_usuario}}</p>
   <p>Correo electrónico: {{ user.correo_electronico}}</p>
+  <p>Edad: {{ user.edad }}</p>
   <p>Última conexión: {{ user.fecha_union}}</p>
   <p><a href="{% url 'tasks:edit_account' %}">Editar cuenta</a></p>
   <!--<a class="nav-link" href="{% url 'tasks:task_list' %}">Lista de tareas</a>-->

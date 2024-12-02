@@ -6,14 +6,15 @@ from django.contrib.auth import authenticate
 class EditAccountForm(forms.ModelForm):
     class Meta:
         model = CustomUser
-        fields = ('nombre_de_usuario', 'correo_electronico')
+        fields = ('nombre_de_usuario', 'correo_electronico', 'edad')
 
 class RegisterForm(UserCreationForm):
     correo_electronico = forms.EmailField(label='Correo electrónico')
+    edad = forms.IntegerField(label='Edad')
 
     class Meta:
         model = CustomUser
-        fields = ('nombre_de_usuario', 'correo_electronico', 'password1', 'password2')
+        fields = ('nombre_de_usuario', 'correo_electronico', 'edad', 'password1', 'password2')
 
 class LoginForm(AuthenticationForm):
     nombre_de_usuario = forms.CharField(label="Nombre de usuario")
