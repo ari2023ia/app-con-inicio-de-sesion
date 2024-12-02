@@ -4,13 +4,15 @@
   <h1>Lista de tareas</h1>
   <ul>
     {% for task in tasks %}
-      <li>{{ task.title }} ({{ task.content }})</li>
+      <li>
+        {{ task.title }} ({{ task.content }})
+        <ul>
+          <li><a href="{% url 'tasks:edit_task' task.pk %}">Editar tarea</a></li>
+          <li><a href="{% url 'tasks:delete_task' task.pk %}">Eliminar tarea</a></li>
+          <li><a href="{% url 'tasks:task_detail' task.pk %}">Ver detalles de la tarea</a></li>
+        </ul>
+      </li>
     {% endfor %}
   </ul>
   <p><a href="{% url 'tasks:create_task' %}">Crear nueva tarea</a></p>
-  <!--<p><a href="{% url 'login' %}">Iniciar sesión</a></p>
-  <p><a href="{% url 'register' %}">Registrarse</a></p>
-  <p><a href="{% url 'tasks:edit_account' %}">Editar cuenta</a></p>
-  <p><a href="{% url 'tasks:edit_password' %}">Cambiar contraseña</a></p>
-  <p><a href="{% url 'tasks:delete_account' %}">Eliminar cuenta</a></p>-->
 {% endblock %}

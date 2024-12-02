@@ -13,5 +13,5 @@ urlpatterns = [
     path('account/delete/', views.delete_account_view, name='delete_account'),
     path('tasks/', include('tasks.urls')),
     path('logout/', views.logout_view, name='logout'),
-    path('detalles_cuenta/', views.detalles_cuenta, name='detalles_cuenta'),
+    path('detalles_cuenta/', views.detalles_cuenta, name='detalles_cuenta'), 
 ]

@@ -23,5 +23,9 @@ urlpatterns = [
     path('logout/', views.logout_view, name='logout'),
     path('register/', views.register_view, name='register'),
     path('edit_password/', views.edit_password, name='edit_password'),
-    path('delete_account/', views.delete_account, name='delete_account'),
+    path('delete_account/', views.delete_account, name='delete_account'),   
+    path('create/', views.create_task_view, name='create_task'),
+    path('<pk>/', views.task_detail_view, name='task_detail'),
+    path('<pk>/edit/', views.edit_task_view, name='edit_task'),
+    path('<pk>/delete/', views.delete_task_view, name='delete_task'),
 ]
